@@ -13,17 +13,36 @@
 <html <?php language_attributes(); ?>>
     <head>
         <meta charset="<?php bloginfo('charset'); ?>">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <title> Modding Paula </title>
         <?php wp_head(); ?>
     </head>
     <body <?php body_class(); ?>>
         <div id="page" class="site">
             <header>
-                <section class="search">Search</section>
                 <section class="top-bar">
-                    <div class="brand"> P </div>
-                    <div class="second-column">
-                        <nav class="main-menu"> Menu </nav>
+                    <div class="row">
+                        <nav class="navbar bg-transparent">
+                            <div class="container">
+                                <!-- LOGO -->
+                                <a class="navbar-brand brand"> P </a>
+                                <!-- MENÚ BUTTON -->
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTop" aria-controls="navbarTop"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                    <!-- MENÚ -->
+                                    <?php
+                                    $args = array(
+                                        'theme_location' => 'main-menu',
+                                        'container_id' => 'navbarTop',
+                                        'container_class' => 'collapse navbar-collapse',
+                                        'menu_class' => 'nav navbar-nav'
+                                    );
+                                wp_nav_menu($args);
+                                ?>
+                            </div>
+                        </nav>
                     </div>
                 </section>
             </header>
