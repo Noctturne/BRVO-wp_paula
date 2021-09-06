@@ -14,6 +14,7 @@
     <head>
         <meta charset="<?php bloginfo('charset'); ?>">
         <title> Modding Paula </title>
+        <?php wp_head(); ?>
     </head>
     <body <?php body_class(); ?>>
         <div id="page" class="site">
