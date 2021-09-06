@@ -12,3 +12,13 @@ function brvo_modding_scripts() {
 	wp_enqueue_style('brvo-modding-style', get_stylesheet_uri(), array(), filemtime( get_template_directory() . '/style.css'), 'all');
 }
 add_action( 'wp_enqueue_scripts', 'brvo_modding_scripts' );
+
+
+function brvo_modding_config(){
+	register_nav_menus(
+		array(
+			'brvo_modding_main_menu' => 'BRVO Modding Main Menu'
+		)
+	);
+}
+add_action( 'after_setup_theme', 'brvo_modding_config', 0 );

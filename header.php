@@ -29,12 +29,12 @@
                                 <!-- MENÚ BUTTON -->
                                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTop" aria-controls="navbarTop"
                                     aria-expanded="false" aria-label="Toggle navigation">
-                                    <span class="navbar-toggler-icon"></span>
+                                    <span class="navbar-toggler-icon"><i class="fas fa-bars fa-sm"></i></span>
                                 </button>
                                     <!-- MENÚ -->
                                     <?php
                                     $args = array(
-                                        'theme_location' => 'main-menu',
+                                        'theme_location' => 'brvo_modding_main_menu',
                                         'container_id' => 'navbarTop',
                                         'container_class' => 'collapse navbar-collapse',
                                         'menu_class' => 'nav navbar-nav'
