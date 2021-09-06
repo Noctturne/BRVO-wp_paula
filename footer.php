@@ -9,9 +9,17 @@
  * @package BRVO Modding
  */
 ?>
-<footer>
-    <section class="footer-widgets"> Footer Widgets </section>
-    <section class="copyright"> @mbrvo </section>
+<footer class="container-fluid">
+    <section class="footer-widgets"> 
+        <div class="row">
+            Footer Widgets
+        </div>
+    </section>
+    <section class="copyright">
+        <div class="row">
+            @mbrvo 
+        </div>
+    </section>
 </footer>
 </div>
 <?php wp_footer(); ?>
