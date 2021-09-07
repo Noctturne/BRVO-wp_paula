@@ -18,7 +18,7 @@
         <?php wp_head(); ?>
     </head>
     <body <?php body_class(); ?>>
-        <div id="page" class="site">
+        <div id="page" class="site vh-100 bg-mixColored text-white">
             <header>
                 <section class="top-bar">
                     <div class="row">
@@ -36,13 +36,13 @@
                                 </span>
                                 <div class="d-flex float-end">
                                     <div class="cart pt-1">
-                                        <a href="<?php echo wc_get_cart_url(); ?>"><i class="fas fa-shopping-cart"></i></a>
+                                        <a href="<?php echo wc_get_cart_url(); ?>"><i class="fas fa-shopping-cart text-light"></i></a>
                                         <span class="items"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
                                     </div>
                                     <!-- MENÚ BUTTON -->
                                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTop" aria-controls="navbarTop"
                                         aria-expanded="false" aria-label="Toggle navigation">
-                                        <span class="navbar-toggler-icon"><i class="fas fa-bars fa-sm"></i></span>
+                                        <span class="navbar-toggler-icon"><i class="fas fa-bars fa-sm text-light"></i></span>
                                     </button>
                                 </div>
                                     <!-- MENÚ -->
@@ -59,4 +59,8 @@
                         </nav>
                     </div>
                 </section>
+                <div class="title position-absolute top-50 start-50 translate-middle">
+                    <h1 class="display-1 text-center text-light"> <?php the_title( ); ?></h1>
+                </div>
             </header>
+        </div>

@@ -16,10 +16,16 @@
     /** Fonts **/
     --mainFont: 'Lato', sans-serif;
     --headersFont: 'Montserrat', sans-serif;
-    --displayFont: 'Lobster';
 
+    /** Colors **/
+    --black: #000;
+    --white: #FFF;
+    --softPink: #f7d6e6;
+    --softblue: #cfe2ff;
 
 }
+
+
 
 /* GENERAL */
 body{
@@ -30,8 +36,33 @@ h1, h2, h3, h4, h5, h6{
     font-family: var(--headersFont);
 }
 
+
 .size-auto, .size-full, .size-medium, .size-thumbnail {
     max-width: 100%;
     height: auto;
+}
+
+/* HEADER */
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+    border: 0;
+}
+
+#navbarTop{
+    text-align: right;
+    padding-right: 20px;
+}
+
+/* HOME */
+.bg-mixColored{
+    background: var(--softPink);
+    transition: 0.3s;
+}
+
+.bg-mixColored:hover{
+    background: var(--softblue);
 }
 
