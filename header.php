@@ -20,6 +20,11 @@
     <body <?php body_class(); ?>>
         <div id="page" class="site">
             <header>
+                <section class="search">
+                    <div class="container">
+                        <?php get_search_form( ); ?> 
+                    </div>
+                </section>
                 <section class="top-bar">
                     <div class="row">
                         <nav class="navbar bg-transparent">
