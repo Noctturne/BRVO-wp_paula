@@ -27,9 +27,9 @@ function brvo_modding_config(){
 			'default_rows' => 4,
 			'min_rows' => 4,
 			'max_rows' => 10,
-			'default_columns' => 3,
+			'default_columns' => 4,
 			'min_columns' => 1,
-			'max_columns' => 3,
+			'max_columns' => 4,
 		)
 	) );
 	add_theme_support( 'wc-product-gallery-zoom' );
@@ -42,14 +42,7 @@ function brvo_modding_config(){
 }
 add_action( 'after_setup_theme', 'brvo_modding_config', 0 );
 
-/*
-* This is the best way to modify templates
 
-add_action( 'woocommerce_before_main_content', 'brvo_modding_open_container_row', 5);
-	function brvo_modding_open_container_row(){
-		echo '<div class="container shop-content"><div class="row">';
-}
-*/
 
 
 
