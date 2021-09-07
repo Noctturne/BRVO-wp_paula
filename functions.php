@@ -39,6 +39,12 @@ function brvo_modding_config(){
 	add_theme_support( 'wc-product-gallery-zoom' );
 	add_theme_support( 'wc-product-gallery-lightbox' );
 	add_theme_support( 'wc-product-gallery-slider' );
+	add_theme_support( 'custom-logo', array(
+		'height' => 85,
+		'width' => 160,
+		'flex_height' => true,
+		'flex_width' => true,
+	) );
 
 	if( ! isset( $content_width ) ){
 		$content_width = 600;
@@ -46,7 +52,22 @@ function brvo_modding_config(){
 }
 add_action( 'after_setup_theme', 'brvo_modding_config', 0 );
 
+/**
+ * Show cart contents / total Ajax
+ */
+add_filter( 'brvo_modding_woocommerce_add_to_cart_fragments', 'brvo_modding_woocommerce_header_add_to_cart_fragment' );
 
+function woocommerce_header_add_to_cart_fragment( $fragments ) {
+	global $woocommerce;
+
+	ob_start();
+
+	?>
+		<span class="items"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
+	<?php
+	$fragments['span.items'] = ob_get_clean();
+	return $fragments;
+}
 
 
 

@@ -25,12 +25,26 @@
                         <nav class="navbar bg-transparent">
                             <div class="container">
                                 <!-- LOGO -->
-                                <a class="navbar-brand brand"> P </a>
-                                <!-- MENÚ BUTTON -->
-                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTop" aria-controls="navbarTop"
-                                    aria-expanded="false" aria-label="Toggle navigation">
-                                    <span class="navbar-toggler-icon"><i class="fas fa-bars fa-sm"></i></span>
-                                </button>
+                                <span class="navbar-brand">
+                                    <a href="<?php echo home_url( '/' ) ?>"> 
+                                        <?php if(has_custom_logo( )): ?>
+                                            <?php the_custom_logo(  ); ?> 
+                                        <?php else: ?>
+                                            <p> LOGO </p>
+                                        <?php endif; ?>
+                                    </a>
+                                </span>
+                                <div class="d-flex float-end">
+                                    <div class="cart pt-1">
+                                        <a href="<?php echo wc_get_cart_url(); ?>"><i class="fas fa-shopping-cart"></i></a>
+                                        <span class="items"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
+                                    </div>
+                                    <!-- MENÚ BUTTON -->
+                                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTop" aria-controls="navbarTop"
+                                        aria-expanded="false" aria-label="Toggle navigation">
+                                        <span class="navbar-toggler-icon"><i class="fas fa-bars fa-sm"></i></span>
+                                    </button>
+                                </div>
                                     <!-- MENÚ -->
                                     <?php
                                     $args = array(
