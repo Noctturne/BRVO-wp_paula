@@ -11,8 +11,27 @@
     Tags: e-commerce, accessibility-ready, custom-menu, custom-logo, featured-images, footer-widgets, theme options, translation-ready, blog
 */
 
+/**** CUSTOM PROPIERTIES ****/
+:root{
+    /** Fonts **/
+    --mainFont: 'Lato', sans-serif;
+    --headersFont: 'Montserrat', sans-serif;
+    --displayFont: 'Lobster';
+
+
+}
+
 /* GENERAL */
+body{
+    font-family: var(--mainFont);
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: var(--headersFont);
+}
+
 .size-auto, .size-full, .size-medium, .size-thumbnail {
     max-width: 100%;
     height: auto;
 }
+

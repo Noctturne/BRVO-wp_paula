@@ -7,9 +7,13 @@
  * @package BRVO Modding
  */
 function brvo_modding_scripts() {
+	// Bootstrap
 	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/inc/bootstrap.min.js', array('jquery'), '5.0.2', true );
 	wp_enqueue_style('bootstrap-css',  get_template_directory_uri() . '/inc/bootstrap.min.css', array(), '5.0.2', 'all');
+	// My styles
 	wp_enqueue_style('brvo-modding-style', get_stylesheet_uri(), array(), filemtime( get_template_directory() . '/style.css'), 'all');
+	// Google Fonts
+	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Lobster&family=Montserrat:ital,wght@0,700;1,400&display=swap');
 }
 add_action( 'wp_enqueue_scripts', 'brvo_modding_scripts' );
 
