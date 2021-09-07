@@ -24,12 +24,12 @@ function brvo_modding_config(){
 		'thumbnail_image_width' => 255,
 		'single_image_width' => 255,
 		'product_grid' => array(
-			'default_rows' => 10,
-			'min_rows' => 5,
+			'default_rows' => 4,
+			'min_rows' => 4,
 			'max_rows' => 10,
-			'default_columns' => 4,
+			'default_columns' => 3,
 			'min_columns' => 1,
-			'max_columns' => 4,
+			'max_columns' => 3,
 		)
 	) );
 	add_theme_support( 'wc-product-gallery-zoom' );
