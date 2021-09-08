@@ -43,7 +43,11 @@ get_header();
                                 <?php /* Only 50 words of the post content*/ ?>
                                 <div class="content"><?php the_content(); ?></div>
                             </article>
+                            <?php /* comments_template('/ourCommentsTemplate.php) */?>
                         <?php 
+                        if( comments_open() || get_comments_number() ):
+                            comments_template();
+                        endif;
                     endwhile;
                     ?>
                 </div>
