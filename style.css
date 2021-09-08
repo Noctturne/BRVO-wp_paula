@@ -21,11 +21,13 @@
     --black: #000;
     --white: #FFF;
     --softPink: #f7d6e6;
-    --softblue: #cfe2ff;
+    --blue: #00FFD4;
 
 }
 
-
+.text-blue{
+    color: var(--blue);
+}
 
 /* GENERAL */
 body{
@@ -43,6 +45,15 @@ h1, h2, h3, h4, h5, h6{
 }
 
 /* HEADER */
+.img-responsive{
+    max-width: 100%;
+}
+
+#navbarTop{
+    text-align: right;
+    padding-right: 20px;
+}
+
 .navbar-toggler:focus,
 .navbar-toggler:active,
 .navbar-toggler-icon:focus {
@@ -51,18 +62,7 @@ h1, h2, h3, h4, h5, h6{
     border: 0;
 }
 
-#navbarTop{
-    text-align: right;
-    padding-right: 20px;
-}
-
-/* HOME */
-.bg-mixColored{
-    background: var(--softPink);
-    transition: 0.3s;
-}
-
-.bg-mixColored:hover{
-    background: var(--softblue);
+.navbar-collapse ul li a{ 
+    color: var(--white);
 }
 

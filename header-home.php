@@ -18,23 +18,27 @@
         <?php wp_head(); ?>
     </head>
     <body <?php body_class(); ?>>
-        <div id="page" class="site vh-100 bg-mixColored text-white">
+        <?php if (get_header_image()):?>
+            <div id="site-header">
+                <img class="img-responsive" src="<?php header_image(); ?>" width="<?php echo absint( get_custom_header()->width ); ?>" height="<?php echo absint( get_custom_header()->height ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+
+        <div id="page" class="site">
             <header>
                 <section class="top-bar">
                     <div class="row">
-                        <nav class="navbar bg-transparent">
+                        <nav class="navbar fixed-top bg-transparent my-4">
                             <div class="container">
                                 <!-- LOGO -->
-                                <span class="navbar-brand">
-                                    <a href="<?php echo home_url( '/' ) ?>"> 
-                                        <?php if(has_custom_logo( )): ?>
-                                            <?php the_custom_logo(  ); ?> 
-                                        <?php else: ?>
-                                            <p> LOGO </p>
-                                        <?php endif; ?>
-                                    </a>
-                                </span>
-                                <div class="d-flex float-end">
+                                    <span class="navbar-brand text-start">
+                                        <a href="<?php echo home_url( '/' ) ?>"> 
+                                            <?php if(has_custom_logo( )): ?>
+                                                <?php the_custom_logo(  ); ?> 
+                                            <?php else: ?>
+                                                <p> LOGO </p>
+                                            <?php endif; ?>
+                                        </a>
+                                    </span>
+                                <div class="d-flex pt-3">
                                     <div class="cart pt-1">
                                         <a href="<?php echo wc_get_cart_url(); ?>"><i class="fas fa-shopping-cart text-light"></i></a>
                                         <span class="items"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
@@ -59,8 +63,6 @@
                         </nav>
                     </div>
                 </section>
-                <div class="title position-absolute top-50 start-50 translate-middle">
-                    <h1 class="display-1 text-center text-light"> <?php the_title( ); ?></h1>
-                </div>
             </header>
         </div>
+    <?php endif; ?>

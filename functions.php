@@ -46,6 +46,29 @@ function brvo_modding_config(){
 		'flex_width' => true,
 	) );
 
+	add_image_size( 'brvo-modding-background', 1920, 1080, array(
+		'center', 'center'
+	) );
+
+	add_theme_support( 'custom-background', array(
+		'default-color' => '#FFFFFF',
+		'default-image' => '',
+		'default-position-x'     => '',
+		'default-attachment'     => '',
+		'wp-head-callback'       => '_custom_background_cb',
+		'admin-head-callback'    => '',
+		'admin-preview-callback' => ''
+
+	) );
+
+	add_theme_support( 'custom-header', array(
+		'default-image'      => get_template_directory_uri() . '/images/headers/bg-blue.png',
+		'header-text' => true,
+        'default-text-color' => 'FFF',
+        'width'              => 1920,
+        'height'             => 1080,
+	) );
+
 	if( ! isset( $content_width ) ){
 		$content_width = 600;
 	}
