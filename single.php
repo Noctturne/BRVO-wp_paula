@@ -41,7 +41,13 @@ get_header();
                                     </div>
                                 </header>
                                 <?php /* Only 50 words of the post content*/ ?>
-                                <div class="content"><?php the_content(); ?></div>
+                                <div class="content">
+                                    <?php wp_link_pages(array( 
+                                        'before' => '<p class="inner-pagination">' . 'Pages',
+                                        'after' => '</p>',
+                                    ))?>
+                                    <?php the_content(); ?>
+                                </div>
                             </article>
                             <?php /* comments_template('/ourCommentsTemplate.php) */?>
                         <?php 
