@@ -40,13 +40,13 @@
                                     </span>
                                 <div class="d-flex pt-3">
                                     <div class="cart pt-1">
-                                        <a href="<?php echo wc_get_cart_url(); ?>"><i class="fas fa-shopping-cart text-light"></i></a>
+                                        <a href="<?php echo wc_get_cart_url(); ?>"><i class="fas fa-shopping-cart"></i></a>
                                         <span class="items"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
                                     </div>
                                     <!-- MENÚ BUTTON -->
                                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTop" aria-controls="navbarTop"
                                         aria-expanded="false" aria-label="Toggle navigation">
-                                        <span class="navbar-toggler-icon"><i class="fas fa-bars fa-sm text-light"></i></span>
+                                        <span class="navbar-toggler-icon"><i class="fas fa-bars fa-sm"></i></span>
                                     </button>
                                 </div>
                                     <!-- MENÚ -->

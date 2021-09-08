@@ -11,8 +11,12 @@
 ?>
 <footer class="container-fluid">
     <section class="footer-widgets"> 
-        <div class="row">
-            Footer Widgets
+        <div class="row align-items-center">
+            <div class="col-12">
+                <?php if ( is_active_sidebar( 'brvo-modding-sidebar-footer' )):?>
+                    <?php dynamic_sidebar( 'brvo-modding-sidebar-footer' ); ?>
+                <?php endif ?>
+            </div>
         </div>
     </section>
     <section class="copyright">

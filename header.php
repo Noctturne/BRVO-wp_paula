@@ -14,7 +14,7 @@
     <head>
         <meta charset="<?php bloginfo('charset'); ?>">
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <title> Modding Paula </title>
+        <title> Modding </title>
         <?php wp_head(); ?>
     </head>
     <body <?php body_class(); ?>>
