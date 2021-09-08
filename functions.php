@@ -93,6 +93,16 @@ add_action( 'widgets_init', 'brvo_modding_sidebars');
 			'before_title' => '<h4 class="widget-title">',
 			'after_title' => '</h4>'
 		) );
+
+		register_sidebar( array( 
+			'name' => 'Shop Sidebar',
+			'id' => 'brvo-modding-sidebar-shop',
+			'description' => 'Drag and drop your WooCommerce widgets',
+			'before_widget' => '<div id="%1$s" class="widget %2$s widget-wrapper">',
+			'after_widget' => '</div>',
+			'before_title' => '<h4 class="widget-title">',
+			'after_title' => '</h4>'
+		) );
 	}
 
 
