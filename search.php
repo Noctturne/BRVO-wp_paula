@@ -1,8 +1,8 @@
 <?php
 /**
- * The template for displaying archive pages
+ * The template for displaying search results pages
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
  * @package BRVO Modding
  */
@@ -13,16 +13,19 @@ get_header();
 			<main>
 				<div class="container">
 					<div class="row">
+
+						<h1>Search results for: <?php echo get_search_query(); ?></h1>
+
 						<?php 
 
-							the_archive_title( '<h1 class="article-title">', '</h1>' );
+						get_search_form();
 
 							// If there are any posts
 							if( have_posts() ):
 
 								// Load posts loop
 								while( have_posts() ): the_post();
-									get_template_part( 'template-parts/content', 'archive' );
+									get_template_part( 'template-parts/content', 'search' );
 								endwhile;
 
 								// We're using numeric page navigation here.
@@ -33,7 +36,7 @@ get_header();
 								
 							else:
 						?>
-							<p>Nothing to display.</p>
+							<p>There are no results for your query.</p>
 						<?php endif; ?>
 					</div>
 				</div>

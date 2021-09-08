@@ -13,19 +13,8 @@
             <div class="row">
                 <?php 
                     while(have_posts(  )): the_post();
-                    ?>
-                        <article>
-                            <h2><?php the_title(); ?></h2>
-                            <div><?php the_content(); ?></div>
-                            <?php 
-                                if( comments_open() || get_comments_number() ):
-                                comments_template();
-                                endif;
-                            ?>
-                    <?php endwhile; ?>
-                        </article>
-                    <?php 
-                endwhile;
+                        get_template_part( 'template-parts/content', 'page' );
+                    endwhile; 
                 ?>
             </div>
         </div>
