@@ -16,8 +16,8 @@
         </div>
     </section>
     <section class="copyright">
-        <div class="row">
-            @mbrvo 
+        <div class="row text-center">
+            <p><?php echo get_theme_mod('set_copyright', 'Copyright X - All Rights Reserved'); ?></p>
         </div>
     </section>
 </footer>

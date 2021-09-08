@@ -6,6 +6,9 @@
  * 
  * @package BRVO Modding
  */
+// Register customizer
+require_once get_template_directory() . '/inc/customizer.php';
+
 function brvo_modding_scripts() {
 	// Bootstrap
 	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/inc/bootstrap.min.js', array('jquery'), '5.0.2', true );
@@ -46,20 +49,6 @@ function brvo_modding_config(){
 		'flex_width' => true,
 	) );
 
-	add_image_size( 'brvo-modding-background', 1920, 1080, array(
-		'center', 'center'
-	) );
-
-	add_theme_support( 'custom-background', array(
-		'default-color' => '#FFFFFF',
-		'default-image' => '',
-		'default-position-x'     => '',
-		'default-attachment'     => '',
-		'wp-head-callback'       => '_custom_background_cb',
-		'admin-head-callback'    => '',
-		'admin-preview-callback' => ''
-
-	) );
 
 	add_theme_support( 'custom-header', array(
 		'default-image'      => get_template_directory_uri() . '/images/headers/bg-blue.png',
