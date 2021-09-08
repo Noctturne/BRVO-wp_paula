@@ -81,6 +81,20 @@ function woocommerce_header_add_to_cart_fragment( $fragments ) {
 	return $fragments;
 }
 
+/* Sidebars */
+add_action( 'widgets_init', 'brvo_modding_sidebars');
+	function brvo_modding_sidebars(){
+		register_sidebar( array( 
+			'name' => 'BRVO Modding Main Sidebar',
+			'id' => 'brvo-modding-sidebar-1',
+			'description' => 'Drag and drop your widgets',
+			'before_widget' => '<div id="%1$s" class="widget %2$s widget-wrapper">',
+			'after_widget' => '</div>',
+			'before_title' => '<h4 class="widget-title">',
+			'after_title' => '</h4>'
+		) );
+	}
+
 
 
 
